@@ -1,21 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import AllFamilies from './views/AllFamilies.vue'
+import MyFamily from './views/MyFamily.vue'
+import ManageFamilies from './views/ManageFamilies.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/myfamily',
+      name: 'myfamily',
+      component: MyFamily
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/allfamilies',
+      name: 'allfamilies',
+      component: AllFamilies
+    },
+    {
+      path: '/managefamilies',
+      name: 'managefamilies',
+      component: ManageFamilies
     }
   ]
 })
