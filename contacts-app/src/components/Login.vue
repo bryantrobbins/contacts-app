@@ -6,7 +6,7 @@
         </div>
         <div v-else>
             <h2>Provide your email address</h2>
-            <input v-model="addressProvided"/>
+            <input v-model="addressProvided" @keyup.enter="login"/>
             <button @click="login">Log In</button>
         </div>
     </div>
@@ -39,3 +39,12 @@
     }
   }
 </script>
+<style>
+    .login {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+    }
+</style>
